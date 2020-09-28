@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>database.html</title>
+{% endblock %}
+
+{% block body %}
+<h1>Viewing database.html</h1>
+<p1>To test MySQL database, click on MySQL.</p1>
+
+<div class="table">
+    <table>
+        <ul>Existing ID</ul>
+        {% for user in userDetails %}
+        <ul>{{user[0]}}</ul>
+        {% endfor %}
+    </table>
+</div>
+<div class="form">
+    <form method="POST">
+        ID <input type="text" name="id"> <br>
+        Password<input type="text" name="password"> <br>
+        <input type="submit" name="submit">
+    </form>
+</div>
+{% endblock %}
